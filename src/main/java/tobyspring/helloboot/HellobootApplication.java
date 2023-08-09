@@ -11,19 +11,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.DispatcherServlet;
 
 // 스프링컨테이너가 구성정보가 있다는걸 알수 있도록 추가
-@Configuration
-@ComponentScan
+@MySpringBootApplication
 public class HellobootApplication {
-
-	@Bean
-	public ServletWebServerFactory servletWebServerFactory() {
-		return new TomcatServletWebServerFactory();
-	}
-
-	@Bean
-	public DispatcherServlet dispatcherServlet() {
-		return new DispatcherServlet();
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(HellobootApplication.class, args);
